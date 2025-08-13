@@ -6,5 +6,6 @@ var [
   "radha-krishna.jpg",
   "krishna-leela.jpg",
   "krishna-cow.jpg",
-  "radha - krishna "
+  "radha - krishna.jpg",
+  "krishna-sudama.jpg"
 ]
