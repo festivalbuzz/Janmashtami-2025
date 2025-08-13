@@ -151,7 +151,7 @@
       max-width: 1000px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      border-bottom: 6px solid var(--gold-dark); /* Thicker horizontal border */
+      border-bottom: 4px solid var(--gold-dark);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -227,7 +227,7 @@
       margin: 40px 0;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      border-bottom: 6px solid var(--gold-dark); /* Thicker horizontal border */
+      border-bottom: 4px solid var(--gold-dark);
     }
     
     .section-title {
@@ -285,50 +285,50 @@
     
     .wish-card {
       background: linear-gradient(145deg, rgba(30, 58, 138, 0.6), rgba(15, 23, 42, 0.8));
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      border: 1.5px solid var(--gold-dark);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 2px solid var(--gold-dark);
       transition: all 0.4s ease;
-      min-height: 200px; /* Smaller height */
+      min-height: 260px;
       display: flex;
       flex-direction: column;
-      flex: 0 0 80vw; /* Smaller width for mobile */
-      max-width: 350px; /* Smaller max width for larger screens */
+      flex: 0 0 90vw;
+      max-width: 500px;
     }
     
     .wish-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
     
     .wish-language {
       display: inline-block;
       background: linear-gradient(to right, var(--accent), var(--secondary));
       color: var(--dark);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-size: 0.9rem;
       font-weight: bold;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
     
     .wish-text {
-      font-size: 1rem;
-      margin-bottom: 12px;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
       color: var(--light);
-      line-height: 1.6;
+      line-height: 1.7;
       flex-grow: 1;
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
     }
     
     .wish-text::before {
       content: """;
       position: absolute;
       left: 0;
-      top: -10px;
-      font-size: 3rem;
+      top: -15px;
+      font-size: 4rem;
       color: var(--secondary);
       opacity: 0.3;
       font-family: serif;
@@ -337,23 +337,23 @@
     .wish-controls {
       display: flex;
       justify-content: flex-end;
-      gap: 10px;
+      gap: 12px;
     }
     
     .wish-btn {
       background: rgba(255, 255, 255, 0.1);
       border: none;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       color: white;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
     
     .wish-btn:hover {
@@ -389,20 +389,20 @@
     
     .wallpaper-card {
       position: relative;
-      border-radius: 12px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      border: 1.5px solid var(--gold-dark);
-      height: 200px; /* Smaller height */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 2px solid var(--gold-dark);
+      height: 300px;
       transition: all 0.4s ease;
       cursor: pointer;
-      flex: 0 0 80vw; /* Smaller width for mobile */
-      max-width: 300px; /* Smaller max width for larger screens */
+      flex: 0 0 90vw;
+      max-width: 400px;
     }
     
     .wallpaper-card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
       z-index: 10;
     }
     
@@ -423,7 +423,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      padding: 15px 12px 12px;
+      padding: 20px 15px 15px;
       background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
       text-align: center;
       opacity: 0;
@@ -435,33 +435,33 @@
     }
     
     .wallpaper-title {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: var(--secondary);
-      margin-bottom: 8px;
-      text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
       font-weight: 600;
     }
     
     .wallpaper-actions {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
     }
     
     .wallpaper-btn {
       background: rgba(0, 0, 0, 0.7);
       border: none;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       color: white;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
     
     .wallpaper-btn:hover {
@@ -489,8 +489,8 @@
       border-radius: 20px;
       padding: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-bottom: 6px solid var(--gold-dark); /* Thicker horizontal border */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 3px solid var(--gold-dark);
     }
     
     .puja-card h3 {
@@ -649,10 +649,10 @@
     /* Responsive adjustments */
     @media (min-width: 768px) {
       .wish-card {
-        flex: 0 0 300px; /* Adjusted for larger screens */
+        flex: 0 0 400px;
       }
       .wallpaper-card {
-        flex: 0 0 250px; /* Adjusted for larger screens */
+        flex: 0 0 350px;
       }
     }
     
@@ -680,7 +680,7 @@
         font-size: 1.8rem;
       }
       .wallpaper-card {
-        height: 180px;
+        height: 250px;
       }
       .krishna-float {
         width: 120px;
@@ -734,7 +734,7 @@
     
     <!-- Countdown Timer -->
     <div class="countdown">
-      
+    
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">श्री कृष्ण के जन्मोत्सव के लिए शेष समय</p>
       <div class="timer">
         <div class="time-unit">
@@ -758,7 +758,7 @@
     
     <!-- Wishes Section -->
     <div class="section">
-      <h2 class="section-title"><i class="fas fa-blessing"></i> जन्माष्टमी शुभकामनाएं</h2>
+      <h2 class="section-title"><i class="fas fa-pray"></i> जन्माष्टमी शुभकामनाएं</h2>
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">श्री कृष्ण के प्रति अपने प्रेम को व्यक्त करने के लिए इन शुभकामनाओं को साझा करें</p>
       
       <div class="wishes-container">
@@ -959,160 +959,6 @@
             <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
           </div>
         </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            भगवान कृष्ण की मुरली की धुन आपके जीवन में सुख और शांति लाए। शुभ जन्माष्टमी!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May the divine presence of Lord Krishna bring light to your life. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            जन्माष्टमी का यह पवित्र पर्व आपके जीवन में नई उमंग और उत्साह लाए। शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s wisdom guide you through every challenge. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण की कृपा से आपका जीवन समृद्ध और सुखमय हो। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May the blessings of Lord Krishna bring harmony to your life. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            भगवान कृष्ण की लीलाओं से प्रेरणा लें और जीवन को सकारात्मक बनाएं। शुभ जन्माष्टमी!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s divine energy fill your home with happiness. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण का आशीर्वाद आपके परिवार को सुख-शांति दे। जन्माष्टमी की हार्दिक शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May the joy of Janmashtami fill your heart with devotion and love. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            जन्माष्टमी का यह पर्व आपके जीवन में नई रोशनी लाए। शुभ जन्माष्टमी!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s blessings bring you closer to your dreams. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण की भक्ति से आपके जीवन में शांति और समृद्धि आए। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May the divine flute of Lord Krishna bring melody to your life. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
       </div>
     </div>
     
@@ -1122,60 +968,38 @@
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">अपने उपकरणों के लिए इन सुंदर वॉलपेपर को डाउनलोड करें</p>
       
       <div class="wallpapers-grid">
-        <div class="wallpaper-card">
-          <img src="https://i.pinimg.com/originals/0a/7b/6f/0a7b6f8b7b7f8b8b7b7f8b8b7b7f8b8b.jpg" alt="Krishna with Flute">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">कृष्ण बांसुरी</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="wallpaper-card">
-          <img src="https://i.pinimg.com/originals/2b/4e/8f/2b4e8f8b7b7f8b8b7b7f8b8b7b7f8b8b.jpg" alt="Radha Krishna">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">राधा-कृष्ण</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="wallpaper-card">
-          <img src="https://i.pinimg.com/originals/3c/5f/9f/3c5f9f8b7b7f8b8b7b7f8b8b7b7f8b8b.jpg" alt="Krishna Leela">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">कृष्ण लीलाएं</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="wallpaper-card">
-          <img src="https://i.pinimg.com/originals/4d/6a/af/4d6aaf8b7b7f8b8b7b7f8b8b7b7f8b8b.jpg" alt="Krishna with Cow">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">कृष्ण और गाय</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="wallpaper-card">
-          <img src="https://i.pinimg.com/originals/5e/7b/cf/5e7bcf8b7b7f8b8b7b7f8b8b7b7f8b8b.jpg" alt="Krishna and Sudama">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">कृष्ण और सुदामा</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        </div>
+        <!-- Dynamic Image Loading -->
+        <script>
+          // Fetch images from the images folder in GitHub
+          const imagesFolder = 'images/';
+          const wallpaperTitles = {
+            'krishna-flute.jpg': 'कृष्ण बांसुरी',
+            'krishna-cow.jpg': 'कृष्ण और गाय',
+            'krishna-leela.jpg': 'कृष्ण लीलाएं',
+            'radha-krishna.jpg': 'राधा-कृष्न',
+            'krishna-sudama.jpg': 'कृष्ण और सुदामा'
+          };
+
+          const repo = 'festivalbuzz/Janmashtami-2025';
+          const branch = 'main';
+
+          // Dynamically generate wallpaper cards
+          Object.keys(wallpaperTitles).forEach(img => {
+            const div = document.createElement('div');
+            div.className = 'wallpaper-card';
+            div.innerHTML = `
+              <img src="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}" alt="${wallpaperTitles[img]}">
+              <div class="wallpaper-overlay">
+                <div class="wallpaper-title">${wallpaperTitles[img]}</div>
+                <div class="wallpaper-actions">
+                  <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                  <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+                </div>
+              </div>
+            `;
+            document.querySelector('.wallpapers-grid').appendChild(div);
+          });
+        </script>
       </div>
     </div>
     
@@ -1231,7 +1055,7 @@
               <span class="hindi-tip">टिप: भजन से वातावरण भक्तिमय हो जाता है।</span>
             </li>
             <li>
-              <span class="tip-type">व्रत</span> जन्माष्टमी का व्रत रखें और फलाहार करें।
+              <span class="tip-type">व्रत</span> जन्माष्टमी का व्रत रखें और फलाहार करें。
               <span class="hindi-tip">टिप: व्रत में फल और दूध से बनी चीजें खाएं।</span>
             </li>
           </ul>
