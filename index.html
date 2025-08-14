@@ -1056,29 +1056,8 @@
             `;
             document.querySelector('.wallpapers-grid').appendChild(div);
           });
-        
-      // Add event listeners for download and share
-      document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('download-btn')) {
-          const url = e.target.getAttribute('data-url');
-          alert('Direct download not supported. Right-click the image and select "Save Image As..." to download: ' + url);
-        } else if (e.target.classList.contains('share-btn')) {
-          const url = e.target.getAttribute('data-url');
-          if (navigator.share) {
-            navigator.share({
-              title: 'Janmashtami Wallpaper',
-              text: 'Check out this beautiful Janmashtami wallpaper!',
-              url: url
-            }).catch(err => console.log('Sharing failed:', err));
-          } else {
-            navigator.clipboard.writeText(url).then(() => {
-              alert('URL copied to clipboard! Share it manually.');
-            }).catch(err => {
-              alert('Failed to copy URL. Please copy manually: ' + url);
-            });
-          }
-        }
-      });
+
+      
     </script>
   </div>
 </div>
