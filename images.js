@@ -1,4 +1,4 @@
-var wallpaperTitles = [
+var images = [
   'krishna.png',
   'krishna-flute.jpg',
   'krishna-cow.jpg',
@@ -14,5 +14,3 @@ var wallpaperTitles = [
   'pexels-media06.jpg',
 'radha-krishna.jpg'
 ];
-
-export default wallpaperTitles;
