@@ -1012,35 +1012,51 @@
     <!-- Wallpaper Section -->
     
     <div class="section">
-  <h2 class="section-title"><i class="fas fa-images"></i> दिव्य कृष्ण वॉलपेपर</h2>
-  <p class="subtitle" style="text-align: center; margin-bottom: 20px;">अपने उपकरणों के लिए इन सुंदर वॉलपेपर को डाउनलोड करें</p>
-  
-  <div class="wallpapers-grid">
-    <!-- Dynamic Image Loading -->
-    <script type="module">
-      import wallpaperTitles from './images.js';
+      <h2 class="section-title"><i class="fas fa-images"></i> दिव्य कृष्ण वॉलपेपर</h2>
+      <p class="subtitle" style="text-align: center; margin-bottom: 20px;">अपने उपकरणों के लिए इन सुंदर वॉलपेपर को डाउनलोड करें</p>
+      
+      <div class="wallpapers-grid">
+        <!-- Dynamic Image Loading -->
+        <script>
+          // Fetch images from the images folder in GitHub
+          const imagesFolder = 'images/';
+          const wallpaperTitles = {
+            'krishna-flute.jpg': 'कृष्ण बांसुरी',
+            'krishna-cow.jpg': 'कृष्ण और गाय',
+            'krishna-leela.jpg': 'कृष्ण लीलाएं',
+            'radha-krishna.jpg': 'राधा- कृष्ण',
+            'krishna-sudama.jpg':
+            'pexels-media.jpg':
+            'pexels-media01.jpg':
+            'pexels-media02.jpg':
+            'pexels-media03.jpg':
+            'pexels-media04.jpg':
+            'pexels-media05.jpg':
+            'pexels-media06.jpg':
+];
+            
+          };
 
-      const imagesFolder = 'images/';
-      const repo = 'festivalbuzz/Janmashtami-2025';
-      const branch = 'main';
+          const repo = 'festivalbuzz/Janmashtami-2025';
+          const branch = 'main';
 
-      // Dynamically generate wallpaper cards
-      Object.keys(wallpaperTitles).forEach(img => {
-        const div = document.createElement('div');
-        div.className = 'wallpaper-card';
-        div.innerHTML = `
-          <img src="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}" alt="${wallpaperTitles[img]}">
-          <div class="wallpaper-overlay">
-            <div class="wallpaper-title">${wallpaperTitles[img]}</div>
-            <div class="wallpaper-actions">
-              <button class="wallpaper-btn download-btn" title="Download" data-url="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}"><i class="fas fa-download"></i></button>
-              <button class="wallpaper-btn share-btn" title="Share" data-url="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}"><i class="fas fa-share-alt"></i></button>
-            </div>
-          </div>
-        `;
-        document.querySelector('.wallpapers-grid').appendChild(div);
-      });
-
+          // Dynamically generate wallpaper cards
+          Object.keys(wallpaperTitles).forEach(img => {
+            const div = document.createElement('div');
+            div.className = 'wallpaper-card';
+            div.innerHTML = `
+              <img src="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}" alt="${wallpaperTitles[img]}">
+              <div class="wallpaper-overlay">
+                <div class="wallpaper-title">${wallpaperTitles[img]}</div>
+                <div class="wallpaper-actions">
+                  <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                  <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+                </div>
+              </div>
+            `;
+            document.querySelector('.wallpapers-grid').appendChild(div);
+          });
+        
       // Add event listeners for download and share
       document.addEventListener('click', (e) => {
         if (e.target.classList.contains('download-btn')) {
