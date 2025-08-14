@@ -6,6 +6,7 @@ const wallpaperTitles = {
   'krishna-leela.jpg': 'कृष्ण लीलाएं',
   'radha-krishna.jpg': 'राधा-कृष्ण',
   'krishna-sudama.jpg': 'कृष्ण और सुदामा',
+  'krishna.png':
             'pexels-media.jpg':
             'pexels-media01.jpg':
             'pexels-media02.jpg':
