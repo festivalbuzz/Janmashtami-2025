@@ -1350,18 +1350,42 @@
     }, 1000);
 
     // View All functionality for wallpapers
-    const viewAllWallpapersBtn = document.getElementById('viewAllWallpapers');
-    const wallpapersGrid = document.getElementById('wallpapersGrid');
-    
-    viewAllWallpapersBtn.addEventListener('click', function() {
-      if (wallpapersGrid.classList.contains('grid-mode')) {
-        wallpapersGrid.classList.remove('grid-mode');
-        viewAllWallpapersBtn.textContent = 'सभी वॉलपेपर देखें';
-      } else {
-        wallpapersGrid.classList.add('grid-mode');
-        viewAllWallpapersBtn.textContent = 'कम वॉलपेपर देखें';
-      }
+    // New wallpapers to add on "View All" click
+const extraWallpapers = [
+  'pexels-media.jpg',
+  'pexels-media01.jpg',
+  'pexels-media02.jpg',
+  'pexels-media03.jpg',
+  'pexels-media04.jpg',
+  'pexels-media05.jpg',
+  'pexels-media06.jpg'
+];
+
+viewAllWallpapersBtn.addEventListener('click', function() {
+  if (wallpapersGrid.classList.contains('grid-mode')) {
+    wallpapersGrid.classList.remove('grid-mode');
+    viewAllWallpapersBtn.textContent = 'सभी वॉलपेपर देखें';
+  } else {
+    // Add new wallpapers dynamically
+    extraWallpapers.forEach(imgName => {
+      const card = document.createElement('div');
+      card.className = 'wallpaper-card';
+      card.innerHTML = `
+        <img src="images/${imgName}" alt="Lord Krishna">
+        <div class="wallpaper-overlay">
+          <div class="wallpaper-actions">
+            <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+            <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+          </div>
+        </div>
+      `;
+      wallpapersGrid.appendChild(card);
     });
+
+    wallpapersGrid.classList.add('grid-mode');
+    viewAllWallpapersBtn.textContent = 'कम वॉलपेपर देखें';
+  }
+});
 
     // View All functionality for wishes
     const viewAllWishesBtn = document.getElementById('viewAllWishes');
