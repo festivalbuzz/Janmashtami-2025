@@ -13,7 +13,11 @@ const wallpaperTitles = {
             'pexels-media03.jpg':,
              'pexels-media04.jpg':,
              'pexels-media05.jpg':,
-              'pexels-media06.jpg':
+              'story1.jpg':
+                'story2.jpg':
+  'story3.jpg':
+'story4.jpg':
+'radha-krishna1.jpg':
   
 };
 
