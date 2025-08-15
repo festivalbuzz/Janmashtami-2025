@@ -18,6 +18,7 @@ const wallpaperTitles = {
   'story3.jpg':
 'story4.jpg':
 'radha-krishna1.jpg':
+'background.jpg':
   
 };
 
