@@ -1,55 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Title -->
-  <title>Janmashtami 2025 Wishes, Wallpapers & Puja Vidhi | FestivalBuzz</title>
-
-  <!-- Meta Description -->
-  <meta name="description" content="Celebrate Janmashtami 2025 with 50+ wishes, wallpapers, and authentic puja vidhi. Share greetings in Hindi & English. Download beautiful Krishna wallpapers.">
-
-  <!-- Keywords -->
-  <meta name="keywords" content="Janmashtami 2025, Krishna Janmashtami wishes, Janmashtami wallpapers, Janmashtami quotes, puja vidhi, FestivalBuzz">
-
-  <!-- Open Graph (For Social Media Preview) -->
-  <meta property="og:title" content="Janmashtami 2025 Wishes, Wallpapers & Puja Vidhi">
-  <meta property="og:description" content="Celebrate Janmashtami 2025 with wishes, wallpapers, and puja vidhi in Hindi & English.">
-  <meta property="og:image" content="https://yourwebsite.com/images/krishna-flute.png">
-  <meta property="og:url" content="https://yourwebsite.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Janmashtami 2025 Wishes & Wallpapers">
-  <meta name="twitter:description" content="Share Janmashtami wishes, wallpapers & puja vidhi with friends and family.">
-  <meta name="twitter:image" content="https://yourwebsite.com/images/krishna-flute.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/krishna-flute.png">
-
-  <!-- Schema Markup (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Janmashtami 2025",
-    "startDate": "2025-08-16",
-    "location": {
-      "@type": "Place",
-      "name": "FestivalBuzz",
-      "address": "India"
-    },
-    "image": "https://yourwebsite.com/images/krishna-flute.png",
-    "description": "Celebrate Janmashtami 2025 with 50+ wishes, wallpapers, and puja vidhi in Hindi & English.",
-    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled"
-  }
-  </script>
-  </head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>जय श्री कृष्ण | Janmashtami 2025</title>
@@ -71,6 +22,8 @@
       --text: #1e293b;
       --gold-light: #f9e076;
       --gold-dark: #d4af37;
+      --krishna-blue: #4a69bd;
+      --donation-green: #27ae60;
     }
     
     body {
@@ -90,7 +43,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://images.unsplash.com/photo-1594818379496-da1e345b0ded?q=80&w=1932&auto=format&fit=crop') no-repeat center center;
+      background: url('images/background.jpg') no-repeat center center;
       background-size: cover;
       opacity: 0.1;
       z-index: -1;
@@ -302,12 +255,20 @@
       border-bottom: 2px dotted var(--secondary);
     }
     
+    .story-section .section-title {
+      border-bottom: 2px dashed var(--krishna-blue);
+    }
+    
+    .donation-section .section-title {
+      border-bottom: 2px solid var(--donation-green);
+    }
+    
     .section-title i {
       color: var(--accent);
       font-size: 1.8rem;
     }
     
-    /* Wishes Section - Horizontal Scroll */
+    /* Wishes Section */
     .wishes-container {
       display: flex;
       overflow-x: auto;
@@ -317,6 +278,13 @@
       scroll-behavior: smooth;
       scrollbar-width: thin;
       scrollbar-color: var(--secondary) var(--dark);
+    }
+    
+    .wishes-container.grid-mode {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      overflow-x: hidden;
+      gap: 25px;
     }
     
     .wishes-container::-webkit-scrollbar {
@@ -344,6 +312,11 @@
       flex-direction: column;
       flex: 0 0 90vw;
       max-width: 500px;
+    }
+    
+    .wishes-container.grid-mode .wish-card {
+      flex: none;
+      max-width: 100%;
     }
     
     .wish-card:hover {
@@ -411,7 +384,12 @@
       transform: scale(1.1);
     }
     
-    /* Wallpaper Section - Horizontal Scroll */
+    /* Wallpaper Section */
+    .wallpapers-container {
+      position: relative;
+      overflow: hidden;
+    }
+    
     .wallpapers-grid {
       display: flex;
       overflow-x: auto;
@@ -421,6 +399,13 @@
       scroll-behavior: smooth;
       scrollbar-width: thin;
       scrollbar-color: var(--secondary) var(--dark);
+    }
+    
+    .wallpapers-grid.grid-mode {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      overflow-x: hidden;
+      gap: 20px;
     }
     
     .wallpapers-grid::-webkit-scrollbar {
@@ -447,6 +432,12 @@
       cursor: pointer;
       flex: 0 0 90vw;
       max-width: 400px;
+    }
+    
+    .wallpapers-grid.grid-mode .wallpaper-card {
+      flex: none;
+      max-width: 100%;
+      height: 250px;
     }
     
     .wallpaper-card:hover {
@@ -519,7 +510,106 @@
       transform: scale(1.1);
     }
     
-    /* Puja Section with Hindi Tips */
+    .view-all-btn {
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      color: var(--dark);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .view-all-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Story Section */
+    .story-section {
+      background: linear-gradient(to bottom, rgba(74, 105, 189, 0.1), rgba(15, 23, 42, 0.9));
+    }
+    
+    .story-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    @media (min-width: 992px) {
+      .story-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .story-card {
+      background: rgba(30, 58, 138, 0.3);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 3px solid var(--krishna-blue);
+    }
+    
+    .story-card.hidden-story {
+      display: none;
+    }
+    
+    .story-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--accent);
+    }
+    
+    .story-card p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      position: relative;
+      padding-left: 15px;
+    }
+    
+    .story-card p::before {
+      content: "❝";
+      color: var(--secondary);
+      font-size: 2rem;
+      position: absolute;
+      left: -15px;
+      top: -10px;
+      opacity: 0.3;
+    }
+    
+    .story-image {
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 2px solid var(--gold-dark);
+    }
+    
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .story-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Puja Section */
     .puja-section {
       display: grid;
       grid-template-columns: 1fr;
@@ -603,6 +693,97 @@
       text-align: right;
     }
     
+    /* Donation Section */
+    .donation-section {
+      background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(15, 23, 42, 0.9));
+      border-bottom: 4px solid var(--donation-green);
+    }
+    
+    .donation-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .donation-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+    
+    .donation-highlight {
+      color: var(--gold-light);
+      font-weight: 600;
+      font-style: italic;
+    }
+    
+    .donation-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 2px solid var(--donation-green);
+      margin-bottom: 30px;
+    }
+    
+    .donation-title {
+      font-size: 1.5rem;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    
+    .donation-details {
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .donation-detail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    
+    .donation-label {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    
+    .donation-value {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+    
+    .donation-button {
+      background: linear-gradient(135deg, var(--donation-green), #2ecc71);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin: 0 auto;
+    }
+    
+    .donation-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, #2ecc71, var(--donation-green));
+    }
+    
     .actions {
       display: flex;
       justify-content: center;
@@ -677,6 +858,27 @@
       font-size: 1.1rem;
     }
     
+    /* Toast notifications */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--secondary);
+      color: var(--dark);
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
     /* Animations */
     @keyframes float {
       0% { transform: translateY(0px); }
@@ -735,6 +937,15 @@
         width: 120px;
         height: 120px;
       }
+      .wallpapers-grid.grid-mode {
+        grid-template-columns: 1fr;
+      }
+      .wishes-container.grid-mode {
+        grid-template-columns: 1fr;
+      }
+      .story-image {
+        height: 200px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -783,7 +994,6 @@
     
     <!-- Countdown Timer -->
     <div class="countdown">
-    
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">श्री कृष्ण के जन्मोत्सव के लिए शेष समय</p>
       <div class="timer">
         <div class="time-unit">
@@ -807,10 +1017,11 @@
     
     <!-- Wishes Section -->
     <div class="section">
-      <h2 class="section-title"><i class="fas fa-pray"></i> जन्माष्टमी शुभकामनाएं</h2>
+      <h2 class="section-title"><i class="fas fa-pray"></i>जन्माष्टमी शुभकामनएं </h2>
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">श्री कृष्ण के प्रति अपने प्रेम को व्यक्त करने के लिए इन शुभकामनाओं को साझा करें</p>
       
-      <div class="wishes-container">
+      <div class="wishes-container" id="wishesContainer">
+        <!-- Initial 5 wishes -->
         <div class="wish-card">
           <div class="wish-language">हिंदी</div>
           <div class="wish-text">
@@ -823,31 +1034,9 @@
         </div>
         
         <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna bless you with love, happiness, and prosperity. Wishing you a joyous Janmashtami celebration!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
           <div class="wish-language">हिंदी</div>
           <div class="wish-text">
             श्री कृष्ण की कृपा सदैव आप पर बनी रहे। इस पावन पर्व पर आपके घर में खुशियाँ आएं। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            On this auspicious day, may Lord Krishna guide you towards the right path and fill your life with divine love.
           </div>
           <div class="wish-controls">
             <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
@@ -869,18 +1058,7 @@
         <div class="wish-card">
           <div class="wish-language">English</div>
           <div class="wish-text">
-            May the flute of Lord Krishna fill your life with the sweet melody of happiness. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण का आशीर्वाद आपके जीवन को आनंदमय बनाए। जन्माष्टमी की हार्दिक बधाई!
+            May Lord Krishna bless you with love, happiness, and prosperity. Wishing you a joyous Janmashtami celebration!
           </div>
           <div class="wish-controls">
             <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
@@ -891,117 +1069,7 @@
         <div class="wish-card">
           <div class="wish-language">English</div>
           <div class="wish-text">
-            Let the divine grace of Lord Krishna bring peace and prosperity to your life. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            भगवान कृष्ण की बांसुरी की मधुर धुन आपके जीवन में सुख लाए। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s blessings remove all obstacles from your path. Wishing you a blissful Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            राधा-कृष्ण की जोड़ी की तरह आपके जीवन में प्यार और विश्वास बरकरार रहे। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            Celebrate the birth of Lord Krishna with love and devotion. Happy Janmashtami to you and your family!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण की लीलाओं का आनंद लें और उनके आशीर्वाद से जीवन को समृद्ध करें। जन्माष्टमी की बधाई!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s teachings inspire you to live a life of righteousness. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            जन्माष्टमी के इस पावन अवसर पर आपके जीवन में खुशियों की बरसात हो। शुभ जन्माष्टमी!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May the divine love of Lord Krishna fill your heart with joy. Happy Janmashtami!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">हिंदी</div>
-          <div class="wish-text">
-            श्री कृष्ण की भक्ति में डूबकर जीवन को आनंदमय बनाएं। जन्माष्टमी की शुभकामनाएं!
-          </div>
-          <div class="wish-controls">
-            <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-            <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
-          </div>
-        </div>
-        
-        <div class="wish-card">
-          <div class="wish-language">English</div>
-          <div class="wish-text">
-            May Lord Krishna’s blessings bring eternal peace to your soul. Happy Janmashtami!
+            On this auspicious day, may Lord Krishna guide you towards the right path and fill your life with divine love.
           </div>
           <div class="wish-controls">
             <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
@@ -1009,6 +1077,8 @@
           </div>
         </div>
       </div>
+      
+      <button class="view-all-btn" id="viewAllWishes">सभी शुभकामनाएं देखें</button>
     </div>
     
     <!-- Wallpaper Section -->
@@ -1016,40 +1086,114 @@
       <h2 class="section-title"><i class="fas fa-images"></i> दिव्य कृष्ण वॉलपेपर</h2>
       <p class="subtitle" style="text-align: center; margin-bottom: 20px;">अपने उपकरणों के लिए इन सुंदर वॉलपेपर को डाउनलोड करें</p>
       
-      <div class="wallpapers-grid">
-        <!-- Dynamic Image Loading -->
-        <script>
-          // Fetch images from the images folder in GitHub
-          const imagesFolder = 'images/';
-          const wallpaperTitles = {
-            'krishna-flute.jpg': 'कृष्ण बांसुरी',
-            'krishna-cow.jpg': 'कृष्ण और गाय',
-            'krishna-leela.jpg': 'कृष्ण लीलाएं',
-            'radha-krishna.jpg': 'राधा-कृष्न',
-            'krishna-sudama.jpg': 'कृष्ण और सुदामा'
-          };
-
-          const repo = 'festivalbuzz/Janmashtami-2025';
-          const branch = 'main';
-
-          // Dynamically generate wallpaper cards
-          Object.keys(wallpaperTitles).forEach(img => {
-            const div = document.createElement('div');
-            div.className = 'wallpaper-card';
-            div.innerHTML = `
-              <img src="https://raw.githubusercontent.com/${repo}/${branch}/${imagesFolder}${img}" alt="${wallpaperTitles[img]}">
-              <div class="wallpaper-overlay">
-                <div class="wallpaper-title">${wallpaperTitles[img]}</div>
-                <div class="wallpaper-actions">
-                  <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
-                  <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
-                </div>
+      <div class="wallpapers-container">
+        <div class="wallpapers-grid" id="wallpapersGrid">
+          <div class="wallpaper-card">
+            <img src="images/radha-krishna.jpg" alt="Lord Krishna">
+            <div class="wallpaper-overlay">
+              <div class="wallpaper-title">कृष्ण और गाय</div>
+              <div class="wallpaper-actions">
+                <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
               </div>
-            `;
-            document.querySelector('.wallpapers-grid').appendChild(div);
-          });
-        </script>
+            </div>
+          </div>
+          
+          <div class="wallpaper-card">
+            <img src="images/krishna-flute.jpg" alt="Lord Krishna">
+            <div class="wallpaper-overlay">
+              <div class="wallpaper-title">कृष्ण बांसुरी</div>
+              <div class="wallpaper-actions">
+                <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wallpaper-card">
+            <img src="images/radha-krishna1.jpg" alt="Lord Krishna">
+            <div class="wallpaper-overlay">
+              <div class="wallpaper-title">राधा-कृष्ण</div>
+              <div class="wallpaper-actions">
+                <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="wallpaper-card">
+            <img src="images/krishna-leela.jpg" alt="Lord Krishna">
+            <div class="wallpaper-overlay">
+              <div class="wallpaper-title">कृष्ण लीलाएं</div>
+              <div class="wallpaper-actions">
+                <button class="wallpaper-btn" title="Download"><i class="fas fa-download"></i></button>
+                <button class="wallpaper-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="view-all-btn" id="viewAllWallpapers">सभी वॉलपेपर देखें</button>
       </div>
+    </div>
+    
+    <!-- Lord Krishna Story Section -->
+    <div class="section story-section">
+      <h2 class="section-title"><i class="fas fa-book-open"></i> श्री कृष्ण की लीला</h2>
+      <p class="subtitle" style="text-align: center; margin-bottom: 20px;">भगवान कृष्ण के जीवन की अद्भुत कहानियाँ और शिक्षाएँ</p>
+      
+      <div class="story-content" id="storyContent">
+        <div class="story-card">
+          <h3><i class="fas fa-baby"></i> कृष्ण का जन्म</h3>
+          <p>भगवान विष्णु के आठवें अवतार श्री कृष्ण का जन्म मथुरा में कंस के कारागार में हुआ था। उनके जन्म के समय ही कारागार के द्वार स्वयं खुल गए और सभी पहरेदार गहरी नींड में सो गए। वसुदेव ने नवजात कृष्ण को गोकुल में नंद और यशोदा के घर पहुँचाया, जहाँ उनका पालन-पोषण हुआ।</p>
+          <p>कंस के अत्याचारों से मुक्ति दिलाने के लिए भगवान विष्णु ने कृष्ण के रूप में अवतार लिया। उनके जन्म का उद्देश्य धर्म की स्थापना और अधर्म का विनाश करना था।</p>
+        </div>
+        
+        <div class="story-card">
+          <div class="story-image">
+            <img src="images/story1.jpg" alt="Krishna's Childhood">
+          </div>
+        </div>
+        
+        <div class="story-card">
+          <div class="story-image">
+            <img src="images/story2.jpg" alt="Krishna's Teachings">
+          </div>
+        </div>
+        
+        <div class="story-card">
+          <h3><i class="fas fa-hands-helping"></i> कृष्ण की शिक्षाएँ</h3>
+          <p>महाभारत के युद्ध के समय कृष्ण ने अर्जुन को गीता का उपदेश दिया। गीता में कर्मयोग, भक्तियोग और ज्ञानयोग का विस्तृत वर्णन है। कृष्ण ने अर्जुन को समझाया कि मनुष्य को फल की इच्छा किए बिना अपने कर्तव्य का पालन करना चाहिए।</p>
+          <p>कृष्ण की शिक्षाएँ आज भी मानव जीवन के लिए प्रासंगिक हैं। उन्होंने सिखाया कि ईश्वर में पूर्ण समर्पण ही मुक्ति का मार्ग है। कृष्ण का जीवन प्रेम, भक्ति और कर्तव्य का उत्कृष्ट उदाहरण है।</p>
+        </div>
+        
+        <!-- Hidden stories -->
+        <div class="story-card hidden-story">
+          <h3><i class="fas fa-cloud"></i> गोवर्धन पर्वत उठाना</h3>
+          <p>एक बार इंद्रदेव के क्रोध से बचाने के लिए श्री कृष्ण ने गोवर्धन पर्वत को अपनी छोटी उंगली पर उठा लिया। पूरे ब्रजवासी सात दिनों तक इस पर्वत की छाया में सुरक्षित रहे। इस लीला से कृष्ण ने दिखाया कि भगवान अपने भक्तों की रक्षा के लिए किसी भी सीमा तक जा सकते हैं।</p>
+          <p>यह लीला हमें सिखाती है कि ईश्वर पर विश्वास रखने वाले की रक्षा निश्चित रूप से होती है। भक्ति और विश्वास के बल पर कोई भी कठिनाई आसान हो सकती है।</p>
+        </div>
+        
+        <div class="story-card hidden-story">
+          <div class="story-image">
+            <img src="images/story3.jpg" alt="Krishna's Leela">
+          </div>
+        </div>
+        
+        <div class="story-card hidden-story">
+          <div class="story-image">
+            <img src="images/story4.jpg" alt="Krishna's Wisdom">
+          </div>
+        </div>
+        
+        <div class="story-card hidden-story">
+          <h3><i class="fas fa-book"></i> भगवद् गीता का ज्ञान</h3>
+          <p>महाभारत के युद्ध से पहले अर्जुन के मोह को दूर करने के लिए श्री कृष्ण ने गीता का उपदेश दिया। गीता में कर्मयोग, भक्तियोग और ज्ञानयोग का विस्तृत वर्णन है। कृष्ण ने समझाया कि मनुष्य को फल की इच्छा किए बिना अपने कर्तव्य का पालन करना चाहिए।</p>
+          <p>गीता का संदेश है कि ईश्वर में पूर्ण समर्पण ही मुक्ति का मार्ग है। कृष्ण ने कहा: "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज" - सभी धर्मों का परित्याग करके केवल मेरी शरण में आओ।</p>
+        </div>
+      </div>
+      
+      <button class="view-all-btn" id="viewMoreStories">और कहानियाँ देखें</button>
     </div>
     
     <!-- Puja Section -->
@@ -1104,12 +1248,60 @@
               <span class="hindi-tip">टिप: भजन से वातावरण भक्तिमय हो जाता है।</span>
             </li>
             <li>
-              <span class="tip-type">व्रत</span> जन्माष्टमी का व्रत रखें और फलाहार करें。
+              <span class="tip-type">व्रत</span> जन्माष्टमी का व्रत रखें और फलाहार करें।
               <span class="hindi-tip">टिप: व्रत में फल और दूध से बनी चीजें खाएं।</span>
             </li>
           </ul>
           <div class="vedic-source">स्रोत: गरुड़ पुराण</div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Donation Section -->
+    <div class="section donation-section">
+      <h2 class="section-title"><i class="fas fa-hands-helping"></i> दान सेवा</h2>
+      <p class="subtitle" style="text-align: center; margin-bottom: 20px;">भगवान कृष्ण की सेवा में अपना योगदान दें</p>
+      
+      <div class="donation-content">
+        <div class="donation-text">
+          <p>जन्माष्टमी के पावन अवसर पर, हम आपसे विनम्र निवेदन करते हैं कि आप भगवान कृष्ण की सेवा में अपना योगदान दें। आपका दान हमें निम्नलिखित कार्यों में सहायता करेगा:</p>
+          
+          <p class="donation-highlight">
+            <i class="fas fa-check-circle"></i> मंदिरों के रखरखाव और सजावट<br>
+            <i class="fas fa-check-circle"></i> जरूरतमंदों को भोजन वितरण<br>
+            <i class="fas fa-check-circle"></i> धार्मिक ग्रंथों का प्रकाशन<br>
+            <i class="fas fa-check-circle"></i> जन्माष्टमी उत्सवों का आयोजन
+          </p>
+          
+          <p>भगवान कृष्ण ने गीता में कहा है: <span class="donation-highlight">"दान धर्म का सर्वोत्तम रूप है"</span>। आपका छोटा सा योगदान भी कृष्ण भक्ति के प्रसार में महत्वपूर्ण भूमिका निभाएगा।</p>
+        </div>
+        
+        <div class="donation-box">
+          <h3 class="donation-title">अपना दान भेजें</h3>
+          
+          <div class="donation-details">
+            <div class="donation-detail">
+              <span class="donation-label">UPI ID:</span>
+              <span class="donation-value">8851698915@sbi</span>
+            </div>
+            <div class="donation-detail">
+              <span class="donation-label">UPI Number:</span>
+              <span class="donation-value">8851698915</span>
+            </div>
+            <div class="donation-detail">
+              <span class="donation-label">दान राशि:</span>
+              <span class="donation-value">आपकी इच्छानुसार</span>
+            </div>
+          </div>
+          
+          <button class="donation-button" id="donateButton">
+            <i class="fas fa-donate"></i> दान करें
+          </button>
+        </div>
+        
+        <p class="subtitle" style="text-align: center; margin-top: 20px;">
+          आपके दान से प्राप्त धन का उपयोग पूरी पारदर्शिता के साथ किया जाएगा। दान रसीद के लिए कृपया हमसे संपर्क करें।
+        </p>
       </div>
     </div>
     
@@ -1124,11 +1316,14 @@
   <footer>
     <div class="footer-links">
       <a href="#" class="footer-link"><i class="fas fa-info-circle"></i> हमारे बारे में</a>
-      <a href="#" class="footer-link"><i class="fas fa-envelope"></i> संपर्क करें</a>
+      <a href="mailto:mrvijaybabu77@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> संपर्क करें</a>
       <a href="#" class="footer-link"><i class="fas fa-shield-alt"></i> गोपनीयता नीति</a>
     </div>
     <div class="copyright">© 2025 जय श्री कृष्ण | सर्वाधिकार सुरक्षित</div>
   </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
 
   <script>
     // Countdown Timer Logic
@@ -1153,6 +1348,173 @@
         document.querySelector('.countdown').innerHTML = '<h2 class="countdown-title">जन्माष्टमी की शुभकामनाएं!</h2>';
       }
     }, 1000);
+
+    // View All functionality for wallpapers
+    const viewAllWallpapersBtn = document.getElementById('viewAllWallpapers');
+    const wallpapersGrid = document.getElementById('wallpapersGrid');
+    
+    viewAllWallpapersBtn.addEventListener('click', function() {
+      if (wallpapersGrid.classList.contains('grid-mode')) {
+        wallpapersGrid.classList.remove('grid-mode');
+        viewAllWallpapersBtn.textContent = 'सभी वॉलपेपर देखें';
+      } else {
+        wallpapersGrid.classList.add('grid-mode');
+        viewAllWallpapersBtn.textContent = 'कम वॉलपेपर देखें';
+      }
+    });
+
+    // View All functionality for wishes
+    const viewAllWishesBtn = document.getElementById('viewAllWishes');
+    const wishesContainer = document.getElementById('wishesContainer');
+    
+    viewAllWishesBtn.addEventListener('click', function() {
+      if (wishesContainer.classList.contains('grid-mode')) {
+        wishesContainer.classList.remove('grid-mode');
+        viewAllWishesBtn.textContent = 'सभी शुभकामनाएं देखें';
+      } else {
+        // Add more wishes
+        const newWishes = [
+          {lang: "हिंदी", text: "श्री कृष्ण का आशीर्वाद आपके जीवन को आनंदमय बनाए। जन्माष्टमी की हार्दिक बधाई!"},
+          {lang: "हिंदी", text: "भगवान कृष्ण की बांसुरी की मधुर धुन आपके जीवन में सुख लाए। जन्माष्टमी की शुभकामनाएं!"},
+          {lang: "हिंदी", text: "राधा-कृष्ण की जोड़ी की तरह आपके जीवन में प्यार और विश्वास बरकरार रहे। जन्माष्टमी की शुभकामनाएं!"},
+          {lang: "हिंदी", text: "श्री कृष्ण की लीलाओं का आनंद लें और उनके आशीर्वाद से जीवन को समृद्ध करें। जन्माष्टमी की बधाई!"},
+          {lang: "हिंदी", text: "जन्माष्टमी के इस पावन अवसर पर आपके जीवन में खुशियों की बरसात हो। शुभ जन्माष्टमी!"},
+          {lang: "हिंदी", text: "श्री कृष्ण की भक्ति में डूबकर जीवन को आनंदमय बनाएं। जन्माष्टमी की शुभकामनाएं!"},
+          {lang: "हिंदी", text: "कृष्ण जन्माष्टमी के पावन पर्व पर आपको माखन मिश्री की मिठास जैसी मिठास भरा जीवन मिले। हरि ओम!"},
+          {lang: "हिंदी", text: "श्री कृष्ण की कृपा से आपका जीवन हमेशा सुखमय रहे। जन्माष्टमी की हार्दिक शुभकामनाएं!"},
+          {lang: "हिंदी", text: "जन्माष्टमी के पावन अवसर पर भगवान कृष्ण आपके जीवन को सुख, शांति और समृद्धि से भर दें।"},
+          {lang: "हिंदी", text: "कृष्ण जी की जयन्ती पर उनके चरणों में श्रद्धा सुमन अर्पित करते हुए आप सबको जन्माष्टमी की हार्दिक शुभकामनाएं!"},
+          {lang: "English", text: "May the flute of Lord Krishna fill your life with the sweet melody of happiness. Happy Janmashtami!"},
+          {lang: "English", text: "Let the divine grace of Lord Krishna bring peace and prosperity to your life. Happy Janmashtami!"},
+          {lang: "English", text: "May Lord Krishna’s blessings remove all obstacles from your path. Wishing you a blissful Janmashtami!"},
+          {lang: "English", text: "Celebrate the birth of Lord Krishna with love and devotion. Happy Janmashtami to you and your family!"},
+          {lang: "English", text: "May Lord Krishna’s teachings inspire you to live a life of righteousness. Happy Janmashtami!"},
+          {lang: "English", text: "May the divine love of Lord Krishna fill your heart with joy. Happy Janmashtami!"},
+          {lang: "English", text: "May Lord Krishna’s blessings bring eternal peace to your soul. Happy Janmashtami!"},
+          {lang: "English", text: "May Lord Krishna shower his choicest blessings on you and your family. Happy Janmashtami!"},
+          {lang: "English", text: "On this holy day, may Lord Krishna enlighten your mind and soul. Wishing you a blessed Janmashtami!"},
+          {lang: "English", text: "May the divine blessings of Lord Krishna bring you happiness, peace, and prosperity. Happy Janmashtami!"},
+          {lang: "English", text: "Let us celebrate the birth of the one who taught us the art of living. Happy Janmashtami!"},
+          {lang: "English", text: "May Lord Krishna's divine presence fill your life with love and laughter. Happy Janmashtami!"},
+          {lang: "English", text: "On this auspicious day, may Lord Krishna bless you with wisdom and strength. Happy Janmashtami!"},
+          {lang: "English", text: "May the blessings of Lord Krishna be with you today and always. Happy Janmashtami!"},
+          {lang: "English", text: "Wishing you a Janmashtami filled with love, laughter, and the blessings of Lord Krishna!"}
+        ];
+        
+        newWishes.forEach(wish => {
+          const wishCard = document.createElement('div');
+          wishCard.className = 'wish-card';
+          wishCard.innerHTML = `
+            <div class="wish-language">${wish.lang}</div>
+            <div class="wish-text">${wish.text}</div>
+            <div class="wish-controls">
+              <button class="wish-btn" title="Share"><i class="fas fa-share-alt"></i></button>
+              <button class="wish-btn" title="Copy"><i class="fas fa-copy"></i></button>
+            </div>
+          `;
+          wishesContainer.appendChild(wishCard);
+        });
+        
+        // Switch to grid layout
+        wishesContainer.classList.add('grid-mode');
+        viewAllWishesBtn.textContent = 'कम शुभकामनाएं देखें';
+      }
+    });
+
+    // View More Stories functionality
+    const viewMoreStoriesBtn = document.getElementById('viewMoreStories');
+    const storyContent = document.getElementById('storyContent');
+    
+    viewMoreStoriesBtn.addEventListener('click', function() {
+      const hiddenStories = document.querySelectorAll('.story-card.hidden-story');
+      hiddenStories.forEach(story => {
+        story.classList.remove('hidden-story');
+      });
+      viewMoreStoriesBtn.style.display = 'none';
+    });
+
+    // Copy wish functionality
+    document.querySelectorAll('.wish-btn .fa-copy').forEach(button => {
+      button.addEventListener('click', function() {
+        const wishText = this.closest('.wish-card').querySelector('.wish-text').textContent;
+        navigator.clipboard.writeText(wishText)
+          .then(() => {
+            showToast('Copied to clipboard!');
+          })
+          .catch(err => {
+            console.error('Could not copy text: ', err);
+            showToast('Failed to copy!');
+          });
+      });
+    });
+
+    // Download wallpaper functionality
+    document.querySelectorAll('.wallpaper-btn .fa-download').forEach(button => {
+      button.addEventListener('click', function() {
+        const imgSrc = this.closest('.wallpaper-card').querySelector('img').src;
+        const fileName = imgSrc.split('/').pop();
+        
+        // Create a temporary link to trigger download
+        const link = document.createElement('a');
+        link.href = imgSrc;
+        link.download = fileName || 'krishna-wallpaper';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showToast('Download started!');
+      });
+    });
+
+    // Toast notification function
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Share button functionality
+    document.querySelector('.primary-btn').addEventListener('click', function() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Janmashtami 2025',
+          text: 'Check out this beautiful Janmashtami website with wishes, wallpapers and puja vidhi!',
+          url: window.location.href
+        })
+        .catch(console.error);
+      } else {
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => {
+            showToast('Link copied to clipboard!');
+          })
+          .catch(err => {
+            console.error('Could not copy link: ', err);
+            showToast('Failed to copy link!');
+          });
+      }
+    });
+
+    // Donation button functionality
+    document.getElementById('donateButton').addEventListener('click', function() {
+      const upiId = '8851698915@sbi';
+      
+      // Create UPI deep link
+      const upiLink = `upi://pay?pa=${upiId}&pn=Janmashtami%20Donation&cu=INR`;
+      
+      // Open the UPI link
+      window.location.href = upiLink;
+      
+      // Fallback in case the deep link doesn't work
+      setTimeout(() => {
+        if (!document.hidden) {
+          showToast('Please use UPI ID:    8851698915@sbi');
+        }
+      }, 500);
+    });
   </script>
 </body>
 </html>
